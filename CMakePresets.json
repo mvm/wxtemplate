@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "configurePresets": [
+      {
+        "name": "linux-dynamic",
+        "displayName": "Linux Dynamic Build",
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/build",
+        "cacheVariables": {
+          "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+          "VCPKG_TARGET_TRIPLET": "x64-linux-dynamic"
+        }
+      },
+      {
+        "name": "windows",
+        "displayName": "Windows Build",
+        "inherits": ["linux-dynamic"],
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/build",
+        "cacheVariables": {
+          "VCPKG_TARGET_TRIPLET": "x64-windows"
+        }
+      }
+    ]
+  }
