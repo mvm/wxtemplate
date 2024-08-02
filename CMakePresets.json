@@ -3,7 +3,7 @@
     "configurePresets": [
       {
         "name": "linux-dynamic",
-        "displayName": "Linux Dynamic Build",
+        "displayName": "Linux x64 Dynamic Build",
         "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",
         "cacheVariables": {
@@ -13,7 +13,7 @@
       },
       {
         "name": "windows",
-        "displayName": "Windows Build",
+        "displayName": "Windows x64 Build",
         "inherits": ["linux-dynamic"],
         "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",
