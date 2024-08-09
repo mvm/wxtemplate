@@ -19,7 +19,10 @@ bool TestApp::OnInit() {
 
 MainFrame::MainFrame()
     : wxFrame(nullptr, wxID_ANY, "Hello World!") {
-
+        wxBoxSizer *topsizer = new wxBoxSizer(wxVERTICAL);
+        topsizer->Add(new wxStaticText(this, wxID_ANY, "Hello World!"));
+        topsizer->Add(new wxButton(this, wxID_ANY, "Quit"));
+        this->SetSizerAndFit(topsizer);
 }
 
 wxIMPLEMENT_APP(TestApp);
