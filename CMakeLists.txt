@@ -4,4 +4,9 @@ project(wxtest)
 
 find_package(wxWidgets CONFIG REQUIRED)
 
-add_subdirectory(src)
+set(wxtest_SRCS
+    src/main.cpp
+)
+
+add_executable(wxtest WIN32 ${wxtest_SRCS})
+target_link_libraries(wxtest PRIVATE wx::core wx::base)
