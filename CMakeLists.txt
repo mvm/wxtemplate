@@ -11,5 +11,14 @@ set(wxtest_SRCS
 add_executable(wxtest WIN32 ${wxtest_SRCS})
 target_link_libraries(wxtest PRIVATE wx::core wx::base)
 
-install(TARGETS wxtest RUNTIME DESTINATION bin)
+# Hack to fix Windows ZIP packaging. Include all DLLs that
+# VCPKG compiles in the main directory of the ZIP distribution.
+# RUNTIME_DEPENDENCIES can't resolve Windows system DLLs.
+if(WIN32)
+    install(TARGETS wxtest RUNTIME DESTINATION .)
+    file(GLOB wxtest_DLLS "${CMAKE_CURRENT_BINARY_DIR}/*.dll")
+    install(FILES ${wxtest_DLLS} DESTINATION .)
+else()
+    install(TARGETS wxtest DESTINATION bin)
+endif()
 include(CPack)
