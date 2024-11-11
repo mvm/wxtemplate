@@ -10,3 +10,6 @@ set(wxtest_SRCS
 
 add_executable(wxtest WIN32 ${wxtest_SRCS})
 target_link_libraries(wxtest PRIVATE wx::core wx::base)
+
+install(TARGETS wxtest RUNTIME DESTINATION bin)
+include(CPack)
