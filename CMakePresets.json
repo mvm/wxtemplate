@@ -27,7 +27,8 @@
         "displayName": "Windows x64 Release Build",
         "inherits": [ "windows" ],
         "cacheVariables": {
-          "VCPKG_TARGET_TRIPLET": "x64-windows-release"
+          "CMAKE_BUILD_TYPE": "Release",
+          "VCPKG_APPLOCAL_DEPS": "ON"
         }
       }
     ]
