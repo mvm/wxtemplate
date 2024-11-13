@@ -18,7 +18,8 @@
         "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",
         "cacheVariables": {
-          "VCPKG_TARGET_TRIPLET": "x64-windows"
+          "VCPKG_TARGET_TRIPLET": "x64-windows",
+          "X_VCPKG_APPLOCAL_DEPS_INSTALL": "ON"
         }
       },
       {

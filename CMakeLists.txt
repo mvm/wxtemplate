@@ -16,8 +16,6 @@ target_link_libraries(wxtest PRIVATE wx::core wx::base)
 # RUNTIME_DEPENDENCIES can't resolve Windows system DLLs.
 if(WIN32)
     install(TARGETS wxtest RUNTIME DESTINATION .)
-    file(GLOB wxtest_DLLS "${CMAKE_CURRENT_BINARY_DIR}/*.dll")
-    install(FILES ${wxtest_DLLS} DESTINATION .)
 else()
     install(TARGETS wxtest DESTINATION bin)
 endif()
