@@ -20,6 +20,14 @@
         "cacheVariables": {
           "VCPKG_TARGET_TRIPLET": "x64-windows"
         }
+      },
+      {
+        "name": "windows-release",
+        "displayName": "Windows x64 Release Build",
+        "inherits": [ "windows" ],
+        "cacheVariables": {
+          "VCPKG_TARGET_TRIPLET": "x64-windows-release"
+        }
       }
     ]
   }
