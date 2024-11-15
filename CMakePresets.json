@@ -2,7 +2,7 @@
     "version": 2,
     "configurePresets": [
       {
-        "name": "linux-dynamic",
+        "name": "linux",
         "displayName": "Linux x64 Debug Build",
         "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",

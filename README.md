@@ -2,9 +2,8 @@
 
 ## Building from source
 
-For now this project has three presets: `linux-dynamic`, `windows`,
-and `windows-release`. The first two are tested and seem to work,
-but I can't get it to build for `windows-release`.
+For now this project has four presets: `linux`, `linux-release`,
+`windows`, and `windows-release`. All are known to build and run.
 
 Build commands should be, as run from the project build folder:
 
@@ -15,3 +14,7 @@ ninja
 ```
 
 Dependencies are managed by VCPKG.
+
+For any problem detecting compilers or libraries, deleting the
+`build` directory seems to be a requirement to get CMake to update
+its settings if anything in the system changes.
