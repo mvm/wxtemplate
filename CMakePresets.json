@@ -3,7 +3,7 @@
     "configurePresets": [
       {
         "name": "linux-dynamic",
-        "displayName": "Linux x64 Dynamic Build",
+        "displayName": "Linux x64 Debug Build",
         "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",
         "cacheVariables": {
@@ -22,13 +22,14 @@
       },
       {
         "name": "windows",
-        "displayName": "Windows x64 Build",
+        "displayName": "Windows x64 Debug Build",
         "inherits": ["linux-dynamic"],
         "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",
         "cacheVariables": {
           "VCPKG_TARGET_TRIPLET": "x64-windows",
-          "X_VCPKG_APPLOCAL_DEPS_INSTALL": "ON"
+          "X_VCPKG_APPLOCAL_DEPS_INSTALL": "ON",
+          "CMAKE_BUILD_TYPE": "Debug"
         }
       },
       {
