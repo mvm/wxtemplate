@@ -15,7 +15,7 @@
       {
         "name": "linux-release",
         "displayName": "Linux x64 Release Build",
-        "inherits": [ "linux-dynamic" ],
+        "inherits": [ "linux" ],
         "cacheVariables": {
           "CMAKE_BUILD_TYPE": "Release"
         }
@@ -23,8 +23,8 @@
       {
         "name": "windows",
         "displayName": "Windows x64 Debug Build",
-        "inherits": ["linux-dynamic"],
-        "generator": "Ninja",
+        "inherits": ["linux"],   
+         "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",
         "cacheVariables": {
           "VCPKG_TARGET_TRIPLET": "x64-windows",
