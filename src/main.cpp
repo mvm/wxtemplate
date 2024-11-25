@@ -19,6 +19,8 @@ bool TestApp::OnInit() {
 
 MainFrame::MainFrame()
     : wxFrame(nullptr, wxID_ANY, "Hello World!") {
+        this->SetMinSize(wxSize(320, 240));
+
         wxPanel *panel = new wxPanel(this, wxID_ANY);
         wxBoxSizer *topsizer = new wxBoxSizer(wxVERTICAL);
         topsizer->Add(new wxStaticText(panel, wxID_ANY, "Hello World!"));
